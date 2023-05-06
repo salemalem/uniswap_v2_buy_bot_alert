@@ -45,7 +45,8 @@ uniswap_v2_pair_contract.on(filter, async (...args) => {
     console.log(`Buy event received:`);
     const viewOnExplorer = `[Tx](${etherscanUrl}${args[6].transactionHash})`;
     const buyer = args[5];
-    let message = `${buyer} bought $BAEPE for ${buyAmount} $ETH | ${viewOnExplorer}} \n`;
+    let message = "💚💚💚 \n";
+    message += `${buyer} bought $BAEPE for ${buyAmount} $ETH | ${viewOnExplorer}} \n`;
     console.log(message);
     const msgSent = await telegramSendToGroup(message);
     console.log('Message sent to telegram group');
